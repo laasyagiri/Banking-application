@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Registration Form</h1>
+  <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+    <label for="username">Username:</label>
+    <input type="text" name="username" [(ngModel)]="username" required minlength="6" #u="ngModel">
+    <div *ngIf="u.touched && u.invalid" class="error">
+      <span *ngIf="u.errors?.['required']">*Username is required</span>
+      <span *ngIf="u.errors?.['minlength']">*Minimum length is 6</span>
+    </div><br/>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" [(ngModel)]="email" required #e="ngModel">
+    <div *ngIf="e.touched && e.invalid" class="error">
+      <span *ngIf="e.errors?.['required']">*Email is required</span>
+      <span *ngIf="e.errors?.['email']">*Invalid email format</span>
+    </div><br/>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" [(ngModel)]="password" required minlength="8" #p="ngModel">
+    <div *ngIf="p.touched && p.invalid" class="error">
+      <span *ngIf="p.errors?.['required']">*Password is required</span>
+      <span *ngIf="p.errors?.['minlength']">*Minimum length is 8</span>
+    </div><br/>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required #cp="ngModel">
+    <div *ngIf="cp.touched && cp.invalid" class="error">
+      <span *ngIf="cp.errors?.['required']">*Confirm Password is required</span>
+    </div><br/>
+
+    <input type="submit" value="Register">
+  </form>
+  <hr/>
+  <h2 *ngIf="msg" [style.color]="msgColor">{{ msg }}</h2>
+  
+
+<!-- Show login link only if registration is successful -->
+<div *ngIf="msg === 'Registration Successful!'" class="login-link">
+  <p>Now proceed to <a [routerLink]="['/login']">Login</a></p>
+</div>
+
+</div>
