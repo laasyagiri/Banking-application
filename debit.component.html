@@ -1,1 +1,83 @@
-<p>debit works!</p>
+<h2>Withdraw Money from Your Account</h2>
+ 
+<form #debitForm="ngForm" (ngSubmit)="onSubmit(debitForm)">
+  <div>
+    <label>Account Number</label>
+    <input
+      type="text"
+      name="accountNumber"
+      [(ngModel)]="debitModel.accountNumber"
+      required
+      #accNo="ngModel"
+    />
+    <div *ngIf="accNo.invalid && accNo.touched" style="color:red;">
+      Account Number is required
+    </div>
+  </div>
+ 
+  <div>
+    <label>Name</label>
+    <input
+      type="text"
+      name="name"
+[(ngModel)]="debitModel.name"
+      required
+      #name="ngModel"
+    />
+    <div *ngIf="name.invalid && name.touched" style="color:red;">
+      Name is required
+    </div>
+  </div>
+ 
+  <div>
+    <label>Password</label>
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="debitModel.password"
+      required
+      minlength="4"
+      #pass="ngModel"
+    />
+    <div *ngIf="pass.invalid && pass.touched" style="color:red;">
+      Minimum 4 characters required
+    </div>
+  </div>
+ 
+  <div>
+    <label>Withdraw Amount</label>
+    <input
+      type="number"
+      name="amount"
+      [(ngModel)]="debitModel.amount"
+      required
+      min="1"
+      #amt="ngModel"
+    />
+    <div *ngIf="amt.invalid && amt.touched" style="color:red;">
+      Enter a valid amount
+    </div>
+  </div>
+ 
+  <button type="submit" [disabled]="debitForm.invalid">Withdraw</button>
+</form>
+ 
+<!-- 🧾 Transaction Table -->
+<hr />
+<h3>Transaction Summary</h3>
+<table *ngIf="transactions.length > 0" border="1">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Name</th>
+      <th>Withdraw Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let txn of transactions">
+      <td>{{ txn.accountNumber }}</td>
+<td>{{ txn.name }}</td>
+      <td>{{ txn.amount }}</td>
+    </tr>
+  </tbody>
+</table>
