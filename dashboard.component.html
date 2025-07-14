@@ -8,16 +8,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" routerLink="/dashboard/employees">Credit</a>&nbsp;&nbsp;
-        <a class="nav-link" routerLink="/dashboard/addEmployee">Debit</a>
-        <a class="nav-link" routerLink="/dashboard/addEmployee">Transfer</a>
-        <a class="nav-link btn btn-danger ms-2" routerLink="/dashboard/logout">Logout</a>
+        <a class="nav-link" routerLink="/dashboard/credit" routerLinkActive="active">Credit</a>&nbsp;&nbsp;
+        <a class="nav-link" routerLink="/dashboard/debit" routerLinkActive="active">Debit</a>
+        <a class="nav-link" routerLink="/dashboard/transfer" routerLinkActive="active">Transfer</a>
+        <a class="nav-link btn btn-danger ms-2" routerLink="/dashboard/logout" routerLinkActive="active">Logout</a>
       </div>
     </div>
   </div>
 </nav>
 
-
+<div class="container-fluid">
+<router-outlet></router-outlet>
+</div>
 
 
    
