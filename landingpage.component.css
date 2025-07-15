@@ -11,7 +11,7 @@
  
   .hero-section {
     padding: 80px 20px;
-    background: linear-gradient(to right, #0072ff, #00c6ff);
+    background: linear-gradient(to right, #F99D27, #FFA500);
     color: white;
   }
  
@@ -30,4 +30,10 @@
     width: 280px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
+  .bg-smartbank {
+  background: linear-gradient(to right, #F99D27, #FFA500);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
    

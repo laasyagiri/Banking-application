@@ -1,0 +1,22 @@
+.user-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.user-card h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.card-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}

@@ -3,10 +3,11 @@ import { LogoutComponent } from "../logout/logout.component";
 import { TransferComponent } from "../transfer/transfer.component";
 import { CreditComponent } from "../credit/credit.component";
 import { DebitComponent } from "../debit/debit.component";
+import { HomeComponent } from "../home/home.component";
 export const dashboardRoutes:Routes=[
     {path:'transfer', component:TransferComponent},
     {path:'logout',component:LogoutComponent},
     {path:'credit', component: CreditComponent},
-    {path:'debit', component: DebitComponent}
-
+    {path:'debit', component: DebitComponent},
+{path:'home', component: HomeComponent}
 ];

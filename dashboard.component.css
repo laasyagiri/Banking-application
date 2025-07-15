@@ -7,3 +7,15 @@ margin-bottom:20px;
  width: auto;
  margin-right: 10px;
 }
+.bg-smartbank {
+  background: linear-gradient(to right, #F99D27, #FFA500);
+  color: white;
+  
+}
+
+.custom-active {
+  color: #dc3545; /* red */
+  font-weight: bold;
+}
+
+

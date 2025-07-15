@@ -1,22 +1,25 @@
 <!-- Header -->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-smartbank">
   <div class="container-fluid">
     <img src="/smartbank-logo.png" alt="SmartBank Logo" class="logo">
-    <a class="navbar-brand" href="#">Dashboard</a>
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" routerLink="/dashboard/credit" routerLinkActive="active">Credit</a>&nbsp;&nbsp;
-        <a class="nav-link" routerLink="/dashboard/debit" routerLinkActive="active">Debit</a>
-        <a class="nav-link" routerLink="/dashboard/transfer" routerLinkActive="active">Transfer</a>
-        <a class="nav-link btn btn-danger ms-2" routerLink="/dashboard/logout" routerLinkActive="active">Logout</a>
+        <a class="nav-link" routerLink="/dashboard/home" routerLinkActive="active custom-active">Home</a>
+        <a class="nav-link" routerLink="/dashboard/credit" routerLinkActive="active custom-active">Credit</a>&nbsp;&nbsp;
+        <a class="nav-link" routerLink="/dashboard/debit" routerLinkActive="active custom-active">Debit</a>
+        <a class="nav-link" routerLink="/dashboard/transfer" routerLinkActive="active custom-active">Transfer</a>
+        <a class="nav-link btn btn-danger ms-2" routerLink="/dashboard/logout" routerLinkActive="active custom-active">Logout</a>
       </div>
     </div>
   </div>
 </nav>
+
+
 
 <div class="container-fluid">
 <router-outlet></router-outlet>
@@ -24,7 +27,7 @@
 
 
    
-<footer class=" bg-dark text-white py-2">
+<footer class=" bg-smartbank text-white py-2">
   <div class="col-md-12 text-center">
     <p class="mb-1">&copy; 2025 SmartBank. All rights reserved.</p>
     <p class="mb-1">123 Financial Street, Hyderabad, Telangana, India - 500001</p>

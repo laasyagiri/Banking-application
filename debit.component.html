@@ -1,83 +1,95 @@
-<h2>Withdraw Money from Your Account</h2>
+<div class="container mt-4">
+  <h2>Withdraw Money</h2>
  
-<form #debitForm="ngForm" (ngSubmit)="onSubmit(debitForm)">
-  <div>
-    <label>Account Number</label>
-    <input
-      type="text"
-      name="accountNumber"
-      [(ngModel)]="debitModel.accountNumber"
-      required
-      #accNo="ngModel"
-    />
-    <div *ngIf="accNo.invalid && accNo.touched" style="color:red;">
-      Account Number is required
+  <form #debitForm="ngForm" (ngSubmit)="onSubmit(debitForm)">
+    <div class="form-group">
+      <label>Account Number</label>
+      <input
+        type="text"
+        name="accountNumber"
+        class="form-control"
+        [(ngModel)]="debitModel.accountNumber"
+        required
+        #accNo="ngModel"
+      />
+      <div *ngIf="accNo.invalid && accNo.touched" class="text-danger">
+        Account Number is required
+      </div>
     </div>
-  </div>
  
-  <div>
-    <label>Name</label>
-    <input
-      type="text"
-      name="name"
-[(ngModel)]="debitModel.name"
-      required
-      #name="ngModel"
-    />
-    <div *ngIf="name.invalid && name.touched" style="color:red;">
-      Name is required
+    <div class="form-group">
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        [(ngModel)]="debitModel.name"
+        required
+        #name="ngModel"
+      />
+      <div *ngIf="name.invalid && name.touched" class="text-danger">
+        Name is required
+      </div>
     </div>
-  </div>
  
-  <div>
-    <label>Password</label>
-    <input
-      type="password"
-      name="password"
-      [(ngModel)]="debitModel.password"
-      required
-      minlength="4"
-      #pass="ngModel"
-    />
-    <div *ngIf="pass.invalid && pass.touched" style="color:red;">
-      Minimum 4 characters required
+    <div class="form-group">
+      <label>PIN</label>
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        [(ngModel)]="debitModel.password"
+        required
+        maxlength="4"
+        pattern="^[0-9]{4}$"
+        #pass="ngModel"
+        inputmode="numeric"
+      />
+      <div *ngIf="pass.invalid && pass.touched" class="text-danger">
+        
+<span *ngIf="pass.errors?.['required']">*PIN is required</span>
+  <span *ngIf="pass.errors?.['pattern']">*PIN must be exactly 4 digits</span>
+
+      </div>
     </div>
-  </div>
  
-  <div>
-    <label>Withdraw Amount</label>
-    <input
-      type="number"
-      name="amount"
-      [(ngModel)]="debitModel.amount"
-      required
-      min="1"
-      #amt="ngModel"
-    />
-    <div *ngIf="amt.invalid && amt.touched" style="color:red;">
-      Enter a valid amount
+    <div class="form-group">
+      <label>Withdraw Amount</label>
+      <input
+        type="number"
+        name="amount"
+        class="form-control"
+        [(ngModel)]="debitModel.amount"
+        required
+        min="1"
+        #amt="ngModel"
+      />
+      <div *ngIf="amt.invalid && amt.touched" class="text-danger">
+        Enter a valid amount
+      </div>
     </div>
-  </div>
  
-  <button type="submit" [disabled]="debitForm.invalid">Withdraw</button>
-</form>
+    <button type="submit" class="btn btn-danger mt-3" [disabled]="debitForm.invalid">
+      Withdraw
+    </button>
+  </form>
  
-<!-- 🧾 Transaction Table -->
-<hr />
-<h3>Transaction Summary</h3>
-<table *ngIf="transactions.length > 0" border="1">
-  <thead>
-    <tr>
-      <th>Account Number</th>
-      <th>Name</th>
-      <th>Withdraw Amount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let txn of transactions">
-      <td>{{ txn.accountNumber }}</td>
-<td>{{ txn.name }}</td>
-      <td>{{ txn.amount }}</td>
-    </tr>
-  </tbody>
-</table>
+  <hr />
+  <h3>Transaction Summary</h3>
+  <table *ngIf="transactions.length > 0" class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>Name</th>
+        <th>Withdraw Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let txn of transactions">
+        <td>{{ txn.accountNumber }}</td>
+        <td>{{ txn.name }}</td>
+        <td>{{ txn.amount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
