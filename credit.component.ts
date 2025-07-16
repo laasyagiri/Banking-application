@@ -18,6 +18,8 @@ export class CreditComponent {
     accountHolderName: '',
     amount: null
   };
+successMessage: string | null = null;
+errorMessage: string | null = null;
 
   constructor(
     private bankingserviceService: BankingserviceService,
@@ -25,24 +27,28 @@ export class CreditComponent {
   ) {}
 
   onSubmit(): void {
-    const accno = Number(this.creditData.accountNumber);
-    const amount = Number(this.creditData.amount);
+  const accno = Number(this.creditData.accountNumber);
+  const amount = Number(this.creditData.amount);
 
-    this.bankingserviceService.creditAmount(accno, amount).subscribe({
-      next: () => {
-        this.bankingserviceService.getUserByAccNo(accno).subscribe(users => {
-          if (users.length > 0) {
-            const updatedUser = users[0];
-            localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+  this.bankingserviceService.creditAmount(accno, amount).subscribe({
+    next: () => {
+      this.bankingserviceService.getUserByAccNo(accno).subscribe(users => {
+        if (users.length > 0) {
+          const updatedUser = users[0];
+          localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
 
-            alert(`₹${amount} credited to account ${accno}. New Balance: ₹${updatedUser.balance}`);
-            this.router.navigate(['/dashboard/home']);
-          }
-        });
-      },
-      error: err => {
-        alert('Error: ' + err.message);
-      }
-    });
-  }
+          this.successMessage = `₹${amount} credited to account ${accno}. New Balance: ₹${updatedUser.balance}`;
+          this.errorMessage = null;
+
+          setTimeout(() => this.router.navigate(['/dashboard/home']), 3000); // Optional delay
+        }
+      });
+    },
+    error: err => {
+      this.errorMessage = 'Error: ' + err.message;
+      this.successMessage = null;
+    }
+  });
+}
+
 }
