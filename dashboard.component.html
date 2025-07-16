@@ -1,40 +1,51 @@
 <body class="d-flex flex-column min-vh-100">
-<!-- Header -->
 <nav class="navbar navbar-expand navbar-dark bg-smartbank">
-  <div class="container-fluid">
-    <img src="assets/download.png" alt="SmartBank Logo" class="logo">
-    
+<div class="container-fluid">
+<img src="/smartbank-logo 1.png" alt="SmartBank Logo" class="logo">
+ 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<span class="navbar-toggler-icon"></span>
+</button>
+ 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav d-flex w-100">
-        <a class="nav-link" routerLink="/dashboard/home" routerLinkActive="active custom-active">Dashboard</a>
-        <a class="nav-link" routerLink="/dashboard/credit" routerLinkActive="active custom-active">Credit</a>&nbsp;&nbsp;
-        <a class="nav-link" routerLink="/dashboard/debit" routerLinkActive="active custom-active">Debit</a>
-        <a class="nav-link" routerLink="/dashboard/transfer" routerLinkActive="active custom-active">Transfer</a>
-        <a class="nav-link btn btn-danger ml-auto" routerLink="/dashboard/logout" routerLinkActive="active custom-active">Logout</a>
-      </div>
-    </div>
-  </div>
+<div class="navbar-nav w-100 d-flex justify-content-between align-items-center">
+<!-- 🔗 Left-side navigation -->
+<div class="d-flex gap-3">
+<a class="nav-link" routerLink="/dashboard/home" routerLinkActive="active custom-active">Home</a>
+<a class="nav-link" routerLink="/dashboard/credit" routerLinkActive="active custom-active">Credit</a>
+<a class="nav-link" routerLink="/dashboard/debit" routerLinkActive="active custom-active">Debit</a>
+<a class="nav-link" routerLink="/dashboard/transfer" routerLinkActive="active custom-active">Transfer</a>
+</div>
+ <br/>
+        <!-- 🔐 Logout with user icon and name below -->
+<div class="d-flex flex-column align-items-end gap-2">
+<!-- Logout button -->
+<a class="nav-link btn btn-danger" routerLink="/dashboard/logout" routerLinkActive="active custom-active">Logout</a>
+ 
+          <!-- User icon and name side-by-side -->
+<div class="d-flex align-items-center text-white gap-2">
+<i class="bi bi-person-circle fs-4"></i>
+<span class="fw-semibold">{{ userName }}</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </nav>
-
-
-
-<div class="container-fluid flex-grow-1">
+ 
+<!-- Dynamic page content -->
+<div class="container-fluid">
 <router-outlet></router-outlet>
 </div>
-
-
-   
-<footer class="bg-smartbank text-white py-2">
-  <div class="col-md-12 text-center">
-    <p class="mb-1">&copy; 2025 SmartBank. All rights reserved.</p>
-    <p class="mb-1">123 Financial Street, Hyderabad, Telangana, India - 500001</p>
-    <p class="mb-1">Contact: +91-98765-43210</p>
-    <p>Email: <a href="mailto:support@smartbank.com" class="text-white">support&#64;smartbank.com</a></p>
-  </div>
+ 
+<!-- Footer -->
+<footer class="bg-smartbank text-white py-2 mt-4">
+<div class="col-md-12 text-center">
+<p class="mb-1">&copy; 2025 SmartBank. All rights reserved.</p>
+<p class="mb-1">123 Financial Street, Hyderabad, Telangana, India - 500001</p>
+<p class="mb-1">Contact: +91-98765-43210</p>
+<p>Email: <a href="mailto:support@smartbank.com" class="text-white">support&#64;smartbank.com</a></p>
+</div>
 </footer>
- </body>
-
+</body>

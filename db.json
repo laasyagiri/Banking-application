@@ -11,7 +11,7 @@
       "id": "2",
       "username": "Mohana",
       "accno": 2421011,
-      "balance": 40000,
+      "balance": 50000,
       "password": "admin124"
     },
     {
@@ -21,6 +21,14 @@
       "password": "Laasya@01",
       "accno": 6501340,
       "balance": 21500
+    },
+    {
+      "id": "ea84",
+      "username": "Vanyashree",
+      "email": "vanya@gmail.com",
+      "password": "Vanya@012",
+      "accno": 5469145,
+      "balance": 14000
     }
   ]
 }

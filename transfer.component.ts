@@ -42,7 +42,7 @@ export class TransferComponent {
 setTimeout(() => {
                 this.successMessage = null;
                 this.router.navigate(['/dashboard/home']);
-              }, 100000);            }
+              }, 200);            }
           });
         },
         error: err => {

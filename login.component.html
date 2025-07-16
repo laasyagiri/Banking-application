@@ -2,13 +2,13 @@
 <div class="container">
 <h1>LOGIN FORM</h1>
 <form #myForm="ngForm">
-<label for="username">USERNAME:</label>
+<label for="username">ACCOUNT NUMBER:</label>
 <input type="text" name="username" [(ngModel)]="username" required="required" #c1="ngModel" minlength="6">
 <div *ngIf="c1.touched && c1.invalid" class="error">
 <span *ngIf="c1.errors?.['required']">*UserName is Required</span>
 <span *ngIf="c1.errors?.['minlength']">*It should be minimum length as 6</span>
 </div><br/>
-<label for="pwd">Password:</label>
+<label for="pwd">PASSWORD:</label>
 <input type="password" name="pwd" [(ngModel)]="pwd" required="required" #c2="ngModel" minlength="8"> 
 <div *ngIf="c2.touched && c2.invalid" class="error">
 <span *ngIf="c2.errors?.['required']">*Password is Required</span>

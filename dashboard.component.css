@@ -28,5 +28,16 @@ margin-bottom:20px;
   border: 1px solid #ddd;
   border-radius: 8px;
 }
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+ 
+.bi-person-circle:hover {
+  color: #ffc107;
+  cursor: pointer;
+}
 
 
