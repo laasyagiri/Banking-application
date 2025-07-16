@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Nimmi",
+      "accno": 2421010,
+      "balance": 26900,
+      "password": "admin123"
+    },
+    {
+      "id": "2",
+      "username": "Mohana",
+      "accno": 2421011,
+      "balance": 25500,
+      "password": "admin124"
+    }
+  ]
+}
