@@ -1,9 +1,14 @@
-<div class="user-card">
-  <h3>Account Summary</h3>
-  <div class="card-content">
-    <p><strong>Name:</strong> {{ name }}</p>
-    <p><strong>Account No:</strong> {{ accno }}</p>
-    <p><strong>Balance:</strong> ₹{{ balance }}</p>
+<h2>💰 Account Overview</h2>
+<div class="card mb-3">
+  <div class="card-body">
+    <h5><strong>Balance:</strong> ₹{{ balance }}</h5>
   </div>
 </div>
-
+ 
+<h2>👤 Customer Details</h2>
+<div class="card">
+  <div class="card-body">
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Account Number:</strong> {{ accno }}</p>
+  </div>
+</div>

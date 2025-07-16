@@ -4,15 +4,23 @@
       "id": "1",
       "username": "Nimmi",
       "accno": 2421010,
-      "balance": 26900,
+      "balance": 13900,
       "password": "admin123"
     },
     {
       "id": "2",
       "username": "Mohana",
       "accno": 2421011,
-      "balance": 25500,
+      "balance": 40000,
       "password": "admin124"
+    },
+    {
+      "id": "758a",
+      "username": "Laasya",
+      "email": "laasya@gmail.com",
+      "password": "Laasya@01",
+      "accno": 6501340,
+      "balance": 21500
     }
   ]
 }

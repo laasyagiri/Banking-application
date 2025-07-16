@@ -1,23 +1,69 @@
-
 <div class="container mt-4">
   <h2>Transfer Money</h2>
+
   <form (ngSubmit)="onSubmit()" #transferForm="ngForm">
     <div class="form-group">
       <label for="accountNumber">Account Number</label>
-      <input type="text" id="accountNumber" name="accountNumber" class="form-control" [(ngModel)]="transferData.accountNumber" required>
+      <input
+        type="text"
+        id="accountNumber"
+        name="accountNumber"
+        class="form-control"
+        [(ngModel)]="transferData.accountNumber"
+        required
+      />
     </div>
+
     <div class="form-group">
-      <label for="confirmAccountNumber">Confirm Account Number</label>
-      <input type="text" id="confirmAccountNumber" name="confirmAccountNumber" class="form-control" [(ngModel)]="transferData.confirmAccountNumber" required>
+      <label for="confirmAccountNumber">Receiver's Account Number</label>
+      <input
+        type="text"
+        id="confirmAccountNumber"
+        name="confirmAccountNumber"
+        class="form-control"
+        [(ngModel)]="transferData.confirmAccountNumber"
+        required
+      />
     </div>
+
     <div class="form-group">
       <label for="accountHolderName">Name as per Bank</label>
-      <input type="text" id="accountHolderName" name="accountHolderName" class="form-control" [(ngModel)]="transferData.accountHolderName" required>
+      <input
+        type="text"
+        id="accountHolderName"
+        name="accountHolderName"
+        class="form-control"
+        [(ngModel)]="transferData.accountHolderName"
+        required
+      />
     </div>
+
     <div class="form-group">
       <label for="amount">Amount</label>
-      <input type="number" id="amount" name="amount" class="form-control" [(ngModel)]="transferData.amount" required>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        class="form-control"
+        [(ngModel)]="transferData.amount"
+        required
+      />
     </div>
-    <button type="submit" class="btn btn-primary mt-3 mb-3">Transfer</button>
+
+    <button type="submit" class="btn btn-primary mt-3 mb-3">
+      Transfer
+    </button>
   </form>
+
+  <!-- Success Alert -->
+  <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ successMessage }}
+    <button type="button" class="btn-close" aria-label="Close" (click)="successMessage = null"></button>
+  </div>
+
+  <!-- Error Alert -->
+  <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ errorMessage }}
+    <button type="button" class="btn-close" aria-label="Close" (click)="errorMessage = null"></button>
+  </div>
 </div>

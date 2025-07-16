@@ -12,10 +12,21 @@ margin-bottom:20px;
   color: white;
   
 }
-
 .custom-active {
   color: #dc3545; /* red */
   font-weight: bold;
+}
+.user-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  min-height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 

@@ -38,5 +38,10 @@
 <div *ngIf="msg === 'Registration Successful!'" class="login-link">
   <p>Now proceed to <a [routerLink]="['/login']">Login</a></p>
 </div>
+<div *ngIf="msg === 'Registration Successful!'" class="alert alert-success mt-3">
+  {{ msg }} <br/>
+  Your Account Number: <strong>{{ generatedAccNo }}</strong><br/>
+  <a [routerLink]="['/login']">Proceed to Login</a>
+</div>
 
 </div>
