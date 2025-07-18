@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BankingserviceService } from '../bankingservice.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Transaction } from '../bankingservice.service';
 
 @Component({
   selector: 'app-credit',
@@ -31,24 +32,34 @@ errorMessage: string | null = null;
   const amount = Number(this.creditData.amount);
 
   this.bankingserviceService.creditAmount(accno, amount).subscribe({
-    next: () => {
-      this.bankingserviceService.getUserByAccNo(accno).subscribe(users => {
-        if (users.length > 0) {
-          const updatedUser = users[0];
-          localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+  next: () => {
+    this.bankingserviceService.getUserByAccNo(accno).subscribe(users => {
+      if (users.length > 0) {
+        const updatedUser = users[0];
+        localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
 
-          this.successMessage = `₹${amount} credited to account ${accno}. New Balance: ₹${updatedUser.balance}`;
-          this.errorMessage = null;
+        
+        const txn:Transaction = {
+          accno: accno,
+          type: 'credit',
+          amount: amount,
+          date: new Date().toISOString()
+        };
+        this.bankingserviceService.recordTransaction(txn).subscribe();
 
-          setTimeout(() => this.router.navigate(['/dashboard/home']), 3000); // Optional delay
-        }
-      });
-    },
-    error: err => {
-      this.errorMessage = 'Error: ' + err.message;
-      this.successMessage = null;
-    }
-  });
+        this.successMessage = `₹${amount} credited to account ${accno}. New Balance: ₹${updatedUser.balance}`;
+        this.errorMessage = null;
+
+        setTimeout(() => this.router.navigate(['/dashboard/home']), 3000);
+      }
+    });
+  },
+  error: err => {
+    this.errorMessage = 'Error: ' + err.message;
+    this.successMessage = null;
+  }
+});
+
 }
 
 }

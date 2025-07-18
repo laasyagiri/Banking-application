@@ -4,31 +4,81 @@
       "id": "1",
       "username": "Nimmi",
       "accno": 2421010,
-      "balance": 13900,
+      "balance": 27134,
       "password": "admin123"
     },
     {
       "id": "2",
       "username": "Mohana",
       "accno": 2421011,
-      "balance": 50000,
+      "balance": 20321,
       "password": "admin124"
     },
     {
-      "id": "758a",
-      "username": "Laasya",
-      "email": "laasya@gmail.com",
-      "password": "Laasya@01",
-      "accno": 6501340,
-      "balance": 21500
+      "id": "d884",
+      "username": "VanyaSree",
+      "email": "vanya@gmail.com",
+      "password": "admin125",
+      "accno": 9130881,
+      "balance": 6000
+    }
+  ],
+  "transactions": [
+    {
+      "id": "201",
+      "accno": 2421010,
+      "type": "credit",
+      "amount": 1000,
+      "date": "2025-07-16T10:00:00Z"
     },
     {
-      "id": "ea84",
-      "username": "Vanyashree",
-      "email": "vanya@gmail.com",
-      "password": "Vanya@012",
-      "accno": 5469145,
-      "balance": 14000
+      "id": "202",
+      "accno": 2421010,
+      "type": "debit",
+      "amount": 500,
+      "date": "2025-07-16T12:00:00Z"
+    },
+    {
+      "id": "203",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 250,
+      "date": "2025-07-16T15:30:00Z"
+    },
+    {
+      "id": "238a",
+      "accno": 2421011,
+      "type": "credit",
+      "amount": 1200,
+      "date": "2025-07-18T03:58:47.962Z"
+    },
+    {
+      "id": "efa9",
+      "accno": 2421011,
+      "type": "debit",
+      "amount": 20000,
+      "date": "2025-07-18T03:59:07.577Z"
+    },
+    {
+      "id": "4c9e",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 234,
+      "date": "2025-07-18T04:20:03.401Z"
+    },
+    {
+      "id": "97d8",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 234,
+      "date": "2025-07-18T04:20:03.401Z"
+    },
+    {
+      "id": "97d9",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 234,
+      "date": "2025-07-17T04:20:03.401Z"
     }
   ]
 }

@@ -6,7 +6,7 @@ import { LoginComponent } from "../login/login.component";
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, RouterModule, RouterOutlet, LoginComponent],
+  imports: [CommonModule, RouterModule, RouterOutlet],
   templateUrl: './landingpage.component.html',
   styleUrls: ['./landingpage.component.css']
 })

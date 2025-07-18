@@ -1,15 +1,54 @@
-
-<h2>💰 Account Overview</h2>
-<div class="card mb-3 mt-20">
-    <div class="card-body">
+<h3>💰 Account Overview</h3>
+<div class="card mb-3">
+  <div class="card-body">
     <h5><strong>Balance:</strong> ₹{{ balance }}</h5>
   </div>
 </div>
- 
-<h2>👤 Customer Details</h2>
-<div class="card">
+
+<h3>👤 Customer Details</h3>
+<div class="card mb-4">
   <div class="card-body">
     <p><strong>Name:</strong> {{ name }}</p>
     <p><strong>Account Number:</strong> {{ accno }}</p>
   </div>
 </div>
+
+<!-- 📅 Filter Section with spacing -->
+<div class="mb-4 p-3 border rounded bg-light">
+  <h5 class="mb-3">📅 Filter Transactions by Date</h5>
+  <form (ngSubmit)="filterTransactionsByDate()">
+    <div class="row">
+      <div class="col-md-4 mb-2">
+        <label for="fromDate">From:</label>
+        <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate" class="form-control" required>
+      </div>
+      <div class="col-md-4 mb-2">
+        <label for="toDate">To:</label>
+        <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate" class="form-control" required>
+      </div>
+      <div class="col-md-4 d-flex align-items-end mb-2">
+        <button type="submit" class="btn btn-primary w-100">Filter</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<h4>🧾 Transaction History</h4>
+<table class="table table-striped" *ngIf="transactions.length > 0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let txn of transactions; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ txn.type | titlecase }}</td>
+      <td>₹{{ txn.amount }}</td>
+      <td>{{ txn.date | date: 'short' }}</td>
+    </tr>
+  </tbody>
+</table>

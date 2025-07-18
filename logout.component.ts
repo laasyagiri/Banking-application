@@ -15,12 +15,11 @@ export class LogoutComponent implements OnInit{
   ngOnInit(): void {
     this.logout();
   }
-  /*logout():void{
-    alert('logout successfully');
-    this.route.navigate(['/home']);
-  }*/
+  
     logout(): void {
       alert('logout successfully');
+      localStorage.removeItem('username');
+      localStorage.removeItem('loggedInUser');
       
       // Redirect and replace history
       this.route.navigate([''], { replaceUrl: true });
