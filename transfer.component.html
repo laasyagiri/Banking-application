@@ -54,16 +54,17 @@
       Transfer
     </button>
   </form>
-
+</div>
+<div>
   <!-- Success Alert -->
   <div *ngIf="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
     {{ successMessage }}
-    <button type="button" class="btn-close" aria-label="Close" (click)="successMessage = null"></button>
+    
   </div>
 
   <!-- Error Alert -->
   <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
     {{ errorMessage }}
-    <button type="button" class="btn-close" aria-label="Close" (click)="errorMessage = null"></button>
   </div>
-</div>
+  </div>
+

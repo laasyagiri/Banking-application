@@ -4,14 +4,14 @@
       "id": "1",
       "username": "Nimmi",
       "accno": 2421010,
-      "balance": 27134,
+      "balance": 26474,
       "password": "admin123"
     },
     {
       "id": "2",
       "username": "Mohana",
       "accno": 2421011,
-      "balance": 20321,
+      "balance": 23581,
       "password": "admin124"
     },
     {
@@ -21,6 +21,14 @@
       "password": "admin125",
       "accno": 9130881,
       "balance": 6000
+    },
+    {
+      "id": "c2a1",
+      "username": "Kiranmayi",
+      "email": "kiran@gmail.com",
+      "password": "Kiran@01",
+      "accno": 2631646,
+      "balance": 13400
     }
   ],
   "transactions": [
@@ -79,6 +87,174 @@
       "type": "transfer",
       "amount": 234,
       "date": "2025-07-17T04:20:03.401Z"
+    },
+    {
+      "id": "063f",
+      "accno": 2631646,
+      "type": "credit",
+      "amount": 20000,
+      "date": "2025-07-18T04:34:55.082Z"
+    },
+    {
+      "id": "a9e7",
+      "accno": 2631646,
+      "type": "debit",
+      "amount": 4000,
+      "date": "2025-07-18T04:35:14.611Z"
+    },
+    {
+      "id": "03f8",
+      "accno": 2631646,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-18T04:35:45.848Z"
+    },
+    {
+      "id": "22c2",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-18T04:35:45.848Z"
+    },
+    {
+      "id": "5875",
+      "accno": 2631646,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:38:39.509Z"
+    },
+    {
+      "id": "1299",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:38:39.509Z"
+    },
+    {
+      "id": "9cf9",
+      "accno": 2631646,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:39:41.760Z"
+    },
+    {
+      "id": "8d1b",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:39:41.760Z"
+    },
+    {
+      "id": "32de",
+      "accno": 2631646,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:40:42.291Z"
+    },
+    {
+      "id": "7453",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:40:42.291Z"
+    },
+    {
+      "id": "19cf",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:50:01.563Z"
+    },
+    {
+      "id": "31c0",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:50:01.564Z"
+    },
+    {
+      "id": "f264",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:55:13.855Z"
+    },
+    {
+      "id": "3a2d",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T04:55:13.855Z"
+    },
+    {
+      "id": "8f83",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 10,
+      "date": "2025-07-18T04:57:41.765Z"
+    },
+    {
+      "id": "7299",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 10,
+      "date": "2025-07-18T04:57:41.765Z"
+    },
+    {
+      "id": "00a9",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T05:01:12.577Z"
+    },
+    {
+      "id": "22f2",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 200,
+      "date": "2025-07-18T05:01:12.577Z"
+    },
+    {
+      "id": "2bb9",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 10,
+      "date": "2025-07-18T05:02:05.635Z"
+    },
+    {
+      "id": "fe8a",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 10,
+      "date": "2025-07-18T05:02:05.635Z"
+    },
+    {
+      "id": "9e55",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 20,
+      "date": "2025-07-18T05:02:32.264Z"
+    },
+    {
+      "id": "d054",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 20,
+      "date": "2025-07-18T05:02:32.265Z"
+    },
+    {
+      "id": "3bd7",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 20,
+      "date": "2025-07-18T05:04:25.150Z"
+    },
+    {
+      "id": "18dd",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 20,
+      "date": "2025-07-18T05:04:25.150Z"
     }
   ]
 }

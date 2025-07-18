@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BankingserviceService } from '../bankingservice.service';
 import { Router } from '@angular/router';
 import { Transaction } from '../bankingservice.service';
+//import { ToastrService } from 'ngx-toastr';
  
 @Component({
   selector: 'app-transfer',
@@ -37,7 +38,7 @@ export class TransferComponent {
       if (users.length > 0) {
         const updatedSender = users[0];
         localStorage.setItem('loggedInUser', JSON.stringify(updatedSender));
-
+        //this.toaster.success("Success");
        
         const debitTxn:Transaction = {
           accno: fromAcc,
