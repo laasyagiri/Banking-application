@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { BankingserviceService } from '../bankingservice.service';
 
@@ -22,7 +22,7 @@ export class RegisterComponent {
   return Math.floor(1000000 + Math.random() * 9000000);
 }
 constructor(private bankingService: BankingserviceService){}
-  register(form: any) {
+  register(form: NgForm) {
   if (form.valid) {
     if (this.password === this.confirmPassword) {
       const accno = this.generateAccNo();

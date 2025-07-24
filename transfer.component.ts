@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BankingserviceService } from '../bankingservice.service';
 import { Router } from '@angular/router';
 import { Transaction } from '../bankingservice.service';
+import { ToastrService } from 'ngx-toastr';
 //import { ToastrService } from 'ngx-toastr';
  
 @Component({
@@ -24,7 +25,7 @@ export class TransferComponent {
   };
  successMessage: string | null = null;
   errorMessage: string | null = null;
-  constructor(private bankingService: BankingserviceService, private router: Router) {}
+  constructor(private bankingService: BankingserviceService, private router: Router, private toaster: ToastrService) {}
  
   onSubmit(): void {
     const fromAcc = Number(this.transferData.accountNumber);
@@ -58,13 +59,14 @@ export class TransferComponent {
 
         this.successMessage = `SmartBank says: ₹${amount} transferred from ${fromAcc} to ${toAcc}.`;
         this.errorMessage = null;
-
+        
         setTimeout(() => {
           this.successMessage = null;
           this.router.navigate(['/dashboard/home']);
         }, 2000);
       }
     });
+    
   },
   error: err => {
     this.errorMessage = 'SmartBank says: ' + err.message;

@@ -6,7 +6,19 @@ import { ToastrModule } from 'ngx-toastr';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient()]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideHttpClient(), 
+    provideAnimations(),
+    importProvidersFrom(
+      ToastrModule.forRoot({
+        toastClass: 'ngx-toastr custom-toast',
+        positionClass: 'toast-top-right',
+        timeOut: 2000,
+        progressBar: true,
+        closeButton: true,
+        preventDuplicates: true
+      })
+    )
+  ]
 };
 
 

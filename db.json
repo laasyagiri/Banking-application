@@ -4,14 +4,14 @@
       "id": "1",
       "username": "Nimmi",
       "accno": 2421010,
-      "balance": 26474,
+      "balance": 19360,
       "password": "admin123"
     },
     {
       "id": "2",
       "username": "Mohana",
       "accno": 2421011,
-      "balance": 23581,
+      "balance": 30295,
       "password": "admin124"
     },
     {
@@ -29,6 +29,22 @@
       "password": "Kiran@01",
       "accno": 2631646,
       "balance": 13400
+    },
+    {
+      "id": "5bde",
+      "username": "Laasya",
+      "email": "laasya@gmail.com",
+      "password": "Laasya@01",
+      "accno": 4195329,
+      "balance": 0
+    },
+    {
+      "id": "0e71",
+      "username": "Suryaj",
+      "email": "suraj@gmail.com",
+      "password": "Suraj@01",
+      "accno": 8972240,
+      "balance": 16000
     }
   ],
   "transactions": [
@@ -255,6 +271,153 @@
       "type": "transfer",
       "amount": 20,
       "date": "2025-07-18T05:04:25.150Z"
+    },
+    {
+      "id": "9284",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 1234,
+      "date": "2025-07-21T07:04:42.088Z"
+    },
+    {
+      "id": "1f2a",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 1234,
+      "date": "2025-07-21T07:04:42.088Z"
+    },
+    {
+      "id": "4492",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 1234,
+      "date": "2025-07-21T07:05:17.221Z"
+    },
+    {
+      "id": "2467",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 1234,
+      "date": "2025-07-21T07:05:17.221Z"
+    },
+    {
+      "id": "4f65",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 123,
+      "date": "2025-07-22T04:39:19.865Z"
+    },
+    {
+      "id": "3416",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 123,
+      "date": "2025-07-22T04:39:19.865Z"
+    },
+    {
+      "id": "d7a2",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 123,
+      "date": "2025-07-22T04:39:48.180Z"
+    },
+    {
+      "id": "6a73",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 123,
+      "date": "2025-07-22T04:39:48.180Z"
+    },
+    {
+      "id": "66db",
+      "accno": 2421010,
+      "type": "credit",
+      "amount": 2000,
+      "date": "2025-07-22T05:43:38.631Z"
+    },
+    {
+      "id": "3204",
+      "accno": 2421010,
+      "type": "debit",
+      "amount": 2000,
+      "date": "2025-07-22T05:44:35.411Z"
+    },
+    {
+      "id": "92cf",
+      "accno": 2421010,
+      "type": "debit",
+      "amount": 2000,
+      "date": "2025-07-22T05:44:54.227Z"
+    },
+    {
+      "id": "e327",
+      "accno": 2421010,
+      "type": "debit",
+      "amount": 200,
+      "date": "2025-07-22T05:45:34.348Z"
+    },
+    {
+      "id": "ad2b",
+      "accno": 2421010,
+      "type": "debit",
+      "amount": 200,
+      "date": "2025-07-22T05:46:16.453Z"
+    },
+    {
+      "id": "05f6",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-22T05:47:15.744Z"
+    },
+    {
+      "id": "e827",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-22T05:47:15.744Z"
+    },
+    {
+      "id": "b991",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-22T05:48:22.738Z"
+    },
+    {
+      "id": "8555",
+      "accno": 2421011,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-22T05:48:22.738Z"
+    },
+    {
+      "id": "becb",
+      "accno": 8972240,
+      "type": "credit",
+      "amount": 20000,
+      "date": "2025-07-23T07:24:34.295Z"
+    },
+    {
+      "id": "c476",
+      "accno": 8972240,
+      "type": "debit",
+      "amount": 2000,
+      "date": "2025-07-23T07:57:16.111Z"
+    },
+    {
+      "id": "1fac",
+      "accno": 8972240,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-23T08:18:55.877Z"
+    },
+    {
+      "id": "1574",
+      "accno": 2421010,
+      "type": "transfer",
+      "amount": 2000,
+      "date": "2025-07-23T08:18:55.877Z"
     }
   ]
 }

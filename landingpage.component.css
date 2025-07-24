@@ -14,7 +14,10 @@
     background: linear-gradient(to right, #F99D27, #FFA500);
     color: white;
   }
- 
+  .bg-img{
+  margin-right: 5px;
+}
+  
   .features {
     display: flex;
     justify-content: center;
