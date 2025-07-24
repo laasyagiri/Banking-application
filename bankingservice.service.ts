@@ -13,6 +13,7 @@ export interface Transaction {
   type: 'credit' | 'debit' | 'transfer';
   amount: number;
   date: string;
+
 }
  
 @Injectable({
@@ -31,20 +32,6 @@ transactionURL: string = 'http://localhost:3000/transactions';
 getUserByAccNo(accno: number): Observable<any> {
   return this.http.get<any[]>(`${this.baseURL}?accno=${accno}`);
 }
- 
-// recordTransaction(txn: {
-//   accno: number;
-//   type: 'credit' | 'debit' | 'transfer';
-//   amount: number;
-//   date: string;
-// }): Observable<any> {
-//   return this.http.post('http://localhost:3000/transactions', txn);
-// }
- 
- 
- 
- 
- 
  
 creditAmount(accno: number, amount: number): Observable<any> {
   return this.getUserByAccNo(accno).pipe(
@@ -124,24 +111,7 @@ transferAmount(fromAccno: number, toAccno: number, amount: number): Observable<a
     })
   );
 }
-// // getTransactionsByAccno(accno: number): Observable<any[]> {
-// //   return this.http.get<any[]>(`${this.baseURL}/transactions?accno=${accno}`);
-// // }
- 
-// // recordTransaction(data: any): Observable<any> {
-// //   return this.http.post(`${this.baseURL}/transactions`, data); // typically baseURL is http://localhost:3000
-// // }
-// getTransactionsByAccno(accno: number): Observable<Transaction[]>
-// recordTransaction(data: Transaction): Observable<any>
- 
-// recordTransaction(txn: Transaction): Observable<any> {
-//   return this.http.post(`${this.baseURL}/transactions`, txn);
-// }
- 
-// // Fetch transaction history for user
-// getTransactionsByAccno(accno: number): Observable<Transaction[]> {
-//   return this.http.get<Transaction[]>(`${this.baseURL}/transactions?accno=${accno}`); // ❌ also wrong
-// }
+
  
 recordTransaction(txn: Transaction): Observable<any> {
   return this.http.post(this.transactionURL, txn); // ✅ fixed
